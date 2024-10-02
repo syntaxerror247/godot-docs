@@ -100,6 +100,7 @@ There are two types of icons required by Godot:
 
 - **Main Icon:** The "classic" icon. This will be used on all Android versions up to Android 8 (Oreo), exclusive. Must be at least 192×192 px.
 - **Adaptive Icons:** Starting from Android 8 (inclusive), `Adaptive Icons <https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive>`_ were introduced. Applications will need to include separate background and foreground icons to have a native look. The user's launcher application will control the icon's animation and masking. Must be at least 432×432 px.
+- **Themed Icons:** Starting from Android 13(inclusive), Themed Icons were introduced to make adaptive icons more customizable. Applications will need to include monochrome icon to enable themed icon. If monochrome icon is not provided default godot monochrome icon will be used insted.
 
 .. seealso:: It's important to adhere to some rules when designing adaptive icons. `Google Design has provided a nice article <https://medium.com/google-design/designing-adaptive-icons-515af294c783>`_ that helps to understand those rules and some of the capabilities of adaptive icons.
 
@@ -110,6 +111,7 @@ If you don't provide some of the requested icons, Godot will replace them using 
 - **Main Icon:** Provided main icon -> Project icon -> Default Godot main icon.
 - **Adaptive Icon Foreground:** Provided foreground icon -> Provided main icon -> Project icon -> Default Godot foreground icon.
 - **Adaptive Icon Background:** Provided background icon -> Default Godot background icon.
+- **Adaptive Icon Monochrome:** Provided monochrome icon -> Default Godot monochrome icon.
 
 It's highly recommended to provide all the requested icons with their specified resolutions.
 This way, your application will look great on all Android devices and versions.
